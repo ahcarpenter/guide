@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "eb0f139f-7bb9-402d-92ac-6d44516c81d0",
+		"name": "guide",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "optimized route",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "text/plain",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/optimized_route_requests?provider=84c665b2-0b84-45be-8ffc-adec6bb30feb&geo_coordinates=[35.949464,-86.8060602]&addresses=[{ \"street_address\": \"333 Commerce St\", \"city\": \"Nashville\", \"state\": \"TN\", \"zip\": \"37201\" },{ \"street_address\": \"1005 Flagpole Ct.\", \"city\": \"Brentwood\", \"state\": \"TN\", \"zip\": \"37027\" }]",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"optimized_route_requests"
+					],
+					"query": [
+						{
+							"key": "provider",
+							"value": "84c665b2-0b84-45be-8ffc-adec6bb30feb"
+						},
+						{
+							"key": "geo_coordinates",
+							"value": "[35.949464,-86.8060602]"
+						},
+						{
+							"key": "addresses",
+							"value": "[{ \"street_address\": \"333 Commerce St\", \"city\": \"Nashville\", \"state\": \"TN\", \"zip\": \"37201\" },{ \"street_address\": \"1005 Flagpole Ct.\", \"city\": \"Brentwood\", \"state\": \"TN\", \"zip\": \"37027\" }]"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "optimized route w/ invalid input",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "text/plain"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/optimized_route_requests?provider=84c665b2-0b84-45be-8ffc-adec6bb30&geo_coordinates=[35.949464,-186.8060602]&addresses=[{ \"street_address\": \"Invalid\", \"city\": \"Franklin\", \"state\": \"TN\", \"zip\": \"37064\" },{ \"street_address\": \"1005 Flagpole Ct.\", \"city\": \"Brentwood\", \"state\": \"TN\", \"zip\": \"37027\" }]",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"optimized_route_requests"
+					],
+					"query": [
+						{
+							"key": "provider",
+							"value": "84c665b2-0b84-45be-8ffc-adec6bb30"
+						},
+						{
+							"key": "geo_coordinates",
+							"value": "[35.949464,-186.8060602]"
+						},
+						{
+							"key": "addresses",
+							"value": "[{ \"street_address\": \"Invalid\", \"city\": \"Franklin\", \"state\": \"TN\", \"zip\": \"37064\" },{ \"street_address\": \"1005 Flagpole Ct.\", \"city\": \"Brentwood\", \"state\": \"TN\", \"zip\": \"37027\" }]"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "e3b96653-db74-40d2-b019-86dd49d6bc5b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "53094500-8edb-46b6-a98f-fee6df427121",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
